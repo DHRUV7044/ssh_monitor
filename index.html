@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laptop SSH & LAN Monitor</title>
+  <!-- Modern Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Styling -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="glow-container">
+    <div class="glow-orb main-orb"></div>
+    <div class="glow-orb sub-orb"></div>
+  </div>
+
+  <div class="dashboard-wrapper">
+    <header class="app-header">
+      <div class="brand">
+        <i class="fa-solid fa-laptop-code pulse-icon"></i>
+        <h1>Laptop Monitor</h1>
+      </div>
+      <div class="refresh-indicator" id="refresh-indicator">
+        <i class="fa-solid fa-arrows-rotate spinner"></i>
+        <span>Auto-refreshing in <span id="countdown">60</span>s</span>
+      </div>
+    </header>
+
+    <main class="dashboard-grid">
+      <!-- Main Status Card -->
+      <section class="card status-card">
+        <div class="card-header">
+          <span class="card-subtitle">System State</span>
+          <h2 class="card-title">Overall Status</h2>
+        </div>
+        <div class="status-badge-container">
+          <div id="overall-status-badge" class="status-badge state-loading">
+            <i id="status-icon" class="fa-solid fa-circle-notch fa-spin"></i>
+            <span id="overall-status-text">LOADING...</span>
+          </div>
+        </div>
+        <div class="stale-warning hidden" id="stale-warning-box">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          <span id="stale-warning-text">Data is stale. No recent reports from the laptop.</span>
+        </div>
+        <div class="update-time-box">
+          <span class="label"><i class="fa-regular fa-clock"></i> Last Report:</span>
+          <span class="value" id="last-update-val">--</span>
+        </div>
+      </section>
+
+      <!-- Lab LAN Status Card -->
+      <section class="card lab-card">
+        <div class="card-header">
+          <span class="card-subtitle">Lab Environment</span>
+          <h2 class="card-title">Lab Connection</h2>
+        </div>
+        <div class="connection-status">
+          <div class="status-display">
+            <span class="indicator-dot" id="lab-indicator-dot"></span>
+            <span class="indicator-text" id="lab-status-text">Checking...</span>
+          </div>
+        </div>
+        <div class="lab-ip-container">
+          <span class="ip-label">Lab SSH IP Address</span>
+          <div class="ip-display-wrapper">
+            <code id="lab-ip-val">NOT CONNECTED</code>
+            <button id="copy-ip-btn" class="copy-btn" title="Copy IP Address" disabled>
+              <i class="fa-regular fa-copy"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SSH Status Card -->
+      <section class="card ssh-card">
+        <div class="card-header">
+          <span class="card-subtitle">Remote Access</span>
+          <h2 class="card-title">SSH Service</h2>
+        </div>
+        <div class="ssh-status-display">
+          <div class="status-display">
+            <span class="indicator-dot" id="ssh-indicator-dot"></span>
+            <span class="indicator-text" id="ssh-status-text">Checking...</span>
+          </div>
+        </div>
+        <div class="ssh-port-box">
+          <span class="port-label">SSH Port</span>
+          <span class="port-value" id="ssh-port-val">--</span>
+        </div>
+      </section>
+
+      <!-- Connected Networks Card (Spans full width or multiple columns) -->
+      <section class="card networks-card">
+        <div class="card-header">
+          <span class="card-subtitle">Interfaces</span>
+          <h2 class="card-title">Active Networks</h2>
+        </div>
+        <div class="table-wrapper">
+          <table class="networks-table">
+            <thead>
+              <tr>
+                <th><i class="fa-solid fa-wifi"></i> Network Name</th>
+                <th><i class="fa-solid fa-ethernet"></i> Interface</th>
+                <th><i class="fa-solid fa-circle-info"></i> IP Address</th>
+              </tr>
+            </thead>
+            <tbody id="networks-table-body">
+              <tr>
+                <td colspan="3" class="empty-table">No active networks reported.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+    
+    <footer class="app-footer">
+      <p>Laptop SSH/LAN Monitor &copy; 2026. Made with <i class="fa-solid fa-heart"></i> for Lab Automation.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
