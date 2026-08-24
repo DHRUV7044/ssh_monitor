@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   const networksTableBody = document.getElementById('networks-table-body');
   
-  let countdownTimer = 60;
+  let countdownTimer = 900;
   let countdownInterval = null;
 
   // Format date to IST (Asia/Kolkata) deterministically: e.g. "24 Aug 2026, 06:15 PM IST"
