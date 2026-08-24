@@ -16,17 +16,7 @@
       "name": "lo",
       "interface": "lo",
       "ip": "127.0.0.1"
-    },
-    {
-      "name": "wlp109s0f0",
-      "interface": "wlp109s0f0",
-      "ip": "unknown"
-    },
-    {
-      "name": "p2p-dev-wlp109s0f0",
-      "interface": "p2p-dev-wlp109s0f0",
-      "ip": "unknown"
     }
   ],
-  "last_update": "2026-08-24T17:55:23+05:30"
+  "last_update": "2026-08-24T17:55:51+05:30"
 }
