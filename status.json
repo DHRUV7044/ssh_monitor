@@ -1,27 +1,17 @@
 {
-  "status": "lab_connected",
-  "lab_connected": true,
-  "lab_ip": "172.32.5.10",
+  "status": "not_in_lab",
+  "lab_connected": false,
+  "lab_ip": null,
   "ssh": {
     "available": true,
     "port": 22
   },
   "networks": [
     {
-      "name": "netplan-enx207bd51a5943",
-      "interface": "enx207bd51a5943",
-      "ip": "172.32.5.10"
-    },
-    {
-      "name": "DHRUV",
-      "interface": "wlp109s0f0",
-      "ip": "10.98.196.87"
-    },
-    {
       "name": "lo",
       "interface": "lo",
       "ip": "127.0.0.1"
     }
   ],
-  "last_update": "2026-08-24T23:41:22+05:30"
+  "last_update": "2026-08-25T14:08:33+05:30"
 }
