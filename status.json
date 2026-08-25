@@ -8,6 +8,11 @@
   },
   "networks": [
     {
+      "name": "Hotspot",
+      "interface": "wlp109s0f0",
+      "ip": "10.42.0.1"
+    },
+    {
       "name": "netplan-enx207bd51a5943",
       "interface": "enx207bd51a5943",
       "ip": "172.32.5.10"
@@ -18,5 +23,5 @@
       "ip": "127.0.0.1"
     }
   ],
-  "last_update": "2026-08-25T22:09:50+05:30"
+  "last_update": "2026-08-25T22:09:55+05:30"
 }
