@@ -8,10 +8,15 @@
   },
   "networks": [
     {
+      "name": "Harsh's S24",
+      "interface": "wlp109s0f0",
+      "ip": "10.163.112.87"
+    },
+    {
       "name": "lo",
       "interface": "lo",
       "ip": "127.0.0.1"
     }
   ],
-  "last_update": "2026-08-26T11:52:34+05:30"
+  "last_update": "2026-08-26T11:52:39+05:30"
 }
