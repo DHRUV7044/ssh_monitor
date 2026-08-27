@@ -1,7 +1,7 @@
 {
-  "status": "not_in_lab",
-  "lab_connected": false,
-  "lab_ip": null,
+  "status": "lab_connected",
+  "lab_connected": true,
+  "lab_ip": "172.32.5.10",
   "ssh": {
     "available": true,
     "port": 22
@@ -23,5 +23,5 @@
       "ip": "127.0.0.1"
     }
   ],
-  "last_update": "2026-08-27T23:35:02+05:30"
+  "last_update": "2026-08-27T23:35:07+05:30"
 }
