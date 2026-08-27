@@ -1,22 +1,17 @@
 {
-  "status": "lab_connected",
-  "lab_connected": true,
-  "lab_ip": "192.168.68.106",
+  "status": "not_in_lab",
+  "lab_connected": false,
+  "lab_ip": null,
   "ssh": {
     "available": true,
     "port": 22
   },
   "networks": [
     {
-      "name": "ECED_Deco",
-      "interface": "wlp109s0f0",
-      "ip": "192.168.68.106"
-    },
-    {
       "name": "lo",
       "interface": "lo",
       "ip": "127.0.0.1"
     }
   ],
-  "last_update": "2026-08-27T10:40:28+05:30"
+  "last_update": "2026-08-27T13:13:31+05:30"
 }
