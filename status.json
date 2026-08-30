@@ -8,10 +8,15 @@
   },
   "networks": [
     {
+      "name": "DHRUV",
+      "interface": "wlp109s0f0",
+      "ip": "10.167.106.87"
+    },
+    {
       "name": "lo",
       "interface": "lo",
       "ip": "127.0.0.1"
     }
   ],
-  "last_update": "2026-08-30T10:45:57+05:30"
+  "last_update": "2026-08-30T10:46:03+05:30"
 }
